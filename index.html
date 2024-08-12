@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/guess.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1></h1>
+    <div class="guss-game">
+
+        <!-- start game area -->
+
+        <div class="game-area">
+            <div class="inputs" id="myInput"></div> <!-- input game  -->
+            <div class="controls">
+
+                <button class="check" id="check">check word</button>
+                <button class="hint" id="hint"></button>
+            </div>
+            <div class="message" id="message"></div>
+        </div>
+
+        <!-- end game area -->
+        <!-- -- -->
+        <!-- game info -->
+        <div class="key-colors"> <!-- static colors-->
+            <h2>Key Colors</h2>
+            <div class="key-color">
+                <div class="key in-place"></div>
+                <div class="key-text">Letter is correct and in the place.</div>
+            </div>
+            <div class="key-color">
+                <div class="key not-in-place"></div>
+                <div class="key-text">Letter is correct but not in the place.</div>
+            </div>
+            <div class="key-color">
+                <div class="key wrong"></div>
+                <div class="key-text">Letter is wrong.</div>
+            </div>
+        </div>
+        <!-- game info -->
+    </div>
+    <footer></footer>
+    <script src="./js/guess.js"></script>
+</body>
+
+</html>

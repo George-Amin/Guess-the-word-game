@@ -1,0 +1,115 @@
+* {
+	box-sizing: border-box;
+}
+:root {
+	--primary-color: #f44336;
+}
+body {
+	margin: 0;
+	background-color: #eee;
+	font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+	text-align: center;
+	padding: 20px;
+	margin: 0 0 50px;
+	background-color: #fff;
+}
+.guss-game {
+	text-align: center;
+	width: 1000px;
+	margin: 20px auto;
+	display: flex;
+	align-content: flex-start;
+	justify-content: space-between;
+	.game-area {
+		text-align: center;
+		.inputs {
+			> div {
+				margin-bottom: 10px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				> span {
+					margin-right: 10px;
+					font-size: 30px;
+					font-weight: bold;
+				}
+				> input {
+					width: 60px;
+					height: 60px;
+					font-size: 30px;
+					font-weight: bold;
+					text-align: center;
+					margin: 0 5px;
+					caret-color: var(--primary-color);
+					border: none;
+					border-bottom: 4px solid #828282;
+					&:focus {
+						outline: none;
+						border-bottom: 4px solid #1e1e1e;
+					}
+					&.in-place {
+						background-color: orange;
+						color: white;
+						border: none;
+					}
+					&.not-in-place {
+						background-color: mediumaquamarine;
+						color: white;
+						border: none;
+					}
+					&.wrong {
+						background-color: gainsboro;
+						color: white;
+						border: none;
+					}
+				}
+			}
+			.disable-input {
+				opacity: 0.5;
+				/* pointer-events: none; */
+			}
+		}
+	}
+	.key-colors {
+		.key-color {
+			display: flex;
+			text-align: center;
+			padding: 15px;
+			background-color: #fff;
+			margin-bottom: 10px;
+			.key {
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				margin-right: 10px;
+				/* background-color: red; */
+				&.in-place {
+					background-color: orange;
+				}
+				&.not-in-place {
+					background-color: mediumaquamarine;
+				}
+				&.wrong {
+					background-color: gainsboro;
+				}
+			}
+			.key-text {
+				font-size: 20px;
+				font-weight: bold;
+			}
+		}
+	}
+}
+footer {
+	text-align: center;
+	padding: 20px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #333;
+	color: white;
+	font-size: 25px;
+}

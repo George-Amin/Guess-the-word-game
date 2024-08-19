@@ -2,26 +2,41 @@
 	box-sizing: border-box;
 }
 :root {
-	--primary-color: #f44336;
+	--body--: #2c2b30;
+	--shadow-color: #4f4f51;
+	--light-color: #d6d6d6;
+	--ros-f2: #f2c4ce;
+	--Lred: #f58f7c;
 }
 body {
 	margin: 0;
-	background-color: #eee;
+	/* background-image: linear-gradient(to right,  var(--body--) , var(--shadow-color)); */
+	background-image: var(--light-color);
 	font-family: Arial, Helvetica, sans-serif;
 }
-h1 {
-	text-align: center;
-	padding: 20px;
-	margin: 0 0 50px;
-	background-color: #fff;
+header {
+	padding-left: 20px;
+	margin: 15px;
+	display: flex;
+	svg {
+		transform: rotate(-45deg);
+		width: 50px;
+		color: #ffc94b;
+	}
+	h1 {
+		color: var(--light-color);
+	}
 }
 .guss-game {
 	text-align: center;
 	width: 1000px;
 	margin: 20px auto;
 	display: flex;
-	align-content: flex-start;
+	align-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: flex-start;
 	.game-area {
 		text-align: center;
 		.inputs {
@@ -73,12 +88,17 @@ h1 {
 		}
 	}
 	.key-colors {
+		background-color: #f1f1f1;
+		height: fit-content;
+		border-radius: 15px;
+		padding-bottom: 15px;
+		padding: 5px;
 		.key-color {
 			display: flex;
 			text-align: center;
 			padding: 15px;
-			background-color: #fff;
 			margin-bottom: 10px;
+			border-radius: 15px;
 			.key {
 				width: 30px;
 				height: 30px;
@@ -112,4 +132,45 @@ footer {
 	background-color: #333;
 	color: white;
 	font-size: 25px;
+}
+button {
+	margin: 15px;
+	/* background: #ff4742; */
+	background: #ffc337;
+	border: 1px solid #ffc94b;
+	border-radius: 6px;
+	box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+	box-sizing: border-box;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 800;
+	line-height: 16px;
+	min-height: 40px;
+	outline: 0;
+	padding: 12px 14px;
+	transition: all 0.2s ease-in-out;
+}
+
+button:hover,
+button:active {
+	background-color: initial;
+	color: #ffc94b;
+}
+
+button:active {
+	opacity: 0.5;
+}
+.check {
+	width: 40%;
+}
+.hint {
+	background: #f17a7e;
+	border: 1px solid #f17a7e;
+}
+.hint:hover,
+.hint:active {
+	background-color: initial;
+	color: #f17a7e;
 }
